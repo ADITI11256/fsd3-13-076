@@ -23,7 +23,12 @@ const numberToWords = (num) => {
     return "number out of range";
 }
 };
-console.log(numberToWords(5));
-console.log(numberToWords(6));
-console.log(numberToWords(10));
-console.log(numberToWords(3));
+const RollLNum ="2503201000076";
+const digits = String(RollLNum).split("");
+console.log (digits);
+let inwords = "";
+digits.forEach((d) => {
+  inwords +="" + numberToWords(Number(d));
+  });
+  console.log(inwords);
+  
