@@ -20,5 +20,19 @@ D-DELETE/REMOVE
 -watch()
 -unwatchfile()
 
+#crud operation 
+create/insert,read/retrieve,update, delete 
 
+each item (id,name, price ,qty)
+
+features:
+add to cart 
+show cart
+remove item  from cart 
+update quantity from the cart
+checkout 
+note: all items will be stored  in hdd ,so after termination of program we can retrieve cart details 
+required files 
+crud.js - it contains all the methods and entry point  
+product.json - it contains the product details in array form 
 
