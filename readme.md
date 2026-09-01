@@ -35,4 +35,16 @@ note: all items will be stored  in hdd ,so after termination of program we can r
 required files 
 crud.js - it contains all the methods and entry point  
 product.json - it contains the product details in array form 
+## npm : node package manager 
+used to install,rn, uninstall any program/object and package 
+-npm install <packagename>
+-npm uninsatll <package npm>.
 
+to use npm,the project must be npm project
+to create npm project wevcan se 
+-npm init -y
+-it creates a package.jsonfile automatically 
+package.json holds all the information related to install packages from npm 
+-it also creates a folder nodes_modles automatically
+-nodes modles holds the package/library files
+-generally we ignore the node_modules by .gitignore
