@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Matka - Smart Indian Pot</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fff8ef;
+            color: #4a2818;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            height: 70px;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 8%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #a64b20;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4a2818;
+            font-weight: bold;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 560px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 70px 10%;
+            background: linear-gradient(135deg, #fff1dc, #fffaf4);
+        }
+
+        .hero-text {
+            width: 50%;
+        }
+
+        .tag {
+            color: #c45b24;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #b84d1d;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #765b4c;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 30px;
+            background: #b84d1d;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #8e3712;
+        }
+
+        /* POT */
+
+        .pot-area {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pot {
+            width: 230px;
+            height: 300px;
+            background: linear-gradient(
+                90deg,
+                #a94e22,
+                #d17a43,
+                #b95c2b
+            );
+
+            border-radius: 30px 30px 100px 100px;
+            position: relative;
+
+            box-shadow:
+                inset -20px 0 30px rgba(80, 30, 10, 0.2),
+                0 20px 35px rgba(100, 50, 20, 0.25);
+        }
+
+        /* POT NECK */
+
+        .pot-neck {
+            width: 150px;
+            height: 55px;
+            background: #b95c2b;
+            position: absolute;
+            top: -35px;
+            left: 40px;
+            border-radius: 20px 20px 10px 10px;
+        }
+
+        /* POT LID */
+
+        .lid {
+            width: 170px;
+            height: 30px;
+            background: #8d3918;
+            position: absolute;
+            top: -48px;
+            left: 30px;
+            border-radius: 50%;
+        }
+
+        /* SMART DISPLAY */
+
+        .display {
+            position: absolute;
+            width: 130px;
+            height: 75px;
+            background: #30251f;
+            border-radius: 12px;
+            left: 50px;
+            top: 100px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            color: #8ff0b1;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .display strong {
+            font-size: 23px;
+        }
+
+        .display small {
+            margin-top: 5px;
+        }
+
+        /* DECORATION */
+
+        .design {
+            position: absolute;
+            width: 180px;
+            height: 8px;
+            background: #f1b25b;
+            left: 25px;
+            bottom: 60px;
+            border-radius: 50%;
+        }
+
+        .dot {
+            width: 15px;
+            height: 15px;
+            background: #f1b25b;
+            border-radius: 50%;
+            position: absolute;
+            left: 107px;
+            bottom: 90px;
+        }
+
+        /* FEATURES */
+
+        .features {
+            padding: 70px 10%;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .feature-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 20px;
+
+            box-shadow: 0 5px 20px rgba(80, 40, 20, 0.1);
+        }
+
+        .icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #765b4c;
+            line-height: 1.5;
+        }
+
+        /* DASHBOARD */
+
+        .dashboard {
+            background: #fff0dc;
+            padding: 70px 10%;
+            text-align: center;
+        }
+
+        .dashboard h2 {
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
+
+        .dashboard-box {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(80, 40, 20, 0.1);
+        }
+
+        .status {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .data {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 30px;
+        }
+
+        .data-box {
+            padding: 15px;
+        }
+
+        .data-box h3 {
+            font-size: 28px;
+            color: #b84d1d;
+        }
+
+        .data-box p {
+            color: #765b4c;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #3d2115;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                width: 100%;
+            }
+
+            .pot-area {
+                width: 100%;
+                margin-top: 80px;
+            }
+
+            .feature-container {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            🪷 Smart Matka
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <div class="tag">
+                🇮🇳 Tradition Meets Technology
+            </div>
+
+            <h1>
+                Meet the<br>
+                <span>Smart Indian Pot</span>
+            </h1>
+
+            <p>
+                A modern smart matka inspired by India's traditional
+                earthen pots. Monitor water temperature, water level
+                and freshness while keeping the natural cooling of
+                matka alive.
+            </p>
+
+            <button class="btn" onclick="connectPot()">
+                Connect My Pot
+            </button>
+
+        </div>
+
+
+        <!-- POT DESIGN -->
+
+        <div class="pot-area">
+
+            <div class="pot">
+
+                <div class="pot-neck"></div>
+
+                <div class="lid"></div>
+
+                <div class="display">
+
+                    <strong id="temperature">
+                        24°C
+                    </strong>
+
+                    <small>
+                        Water Temp
+                    </small>
+
+                </div>
+
+                <div class="design"></div>
+
+                <div class="dot"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="features" id="features">
+
+        <h2>
+            Smart Features
+        </h2>
+
+        <div class="feature-container">
+
+            <div class="card">
+
+                <div class="icon">
+                    🌡️
+                </div>
+
+                <h3>
+                    Temperature Monitor
+                </h3>
+
+                <p>
+                    Check the temperature of your drinking water
+                    anytime using the smart display.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    💧
+                </div>
+
+                <h3>
+                    Water Level Sensor
+                </h3>
+
+                <p>
+                    Know how much water is left in your matka
+                    without opening it.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🔔
+                </div>
+
+                <h3>
+                    Smart Reminder
+                </h3>
+
+                <p>
+                    Get a reminder when your water level becomes
+                    low or when the pot needs attention.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    ❄️
+                </div>
+
+                <h3>
+                    Natural Cooling
+                </h3>
+
+                <p>
+                    Uses the traditional cooling property of
+                    an earthen pot without electricity.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    📱
+                </div>
+
+                <h3>
+                    Mobile Connection
+                </h3>
+
+                <p>
+                    Connect the smart pot with your phone
+                    to monitor its status.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🌱
+                </div>
+
+                <h3>
+                    Eco Friendly
+                </h3>
+
+                <p>
+                    Made around the idea of traditional
+                    sustainable Indian pottery.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DASHBOARD -->
+
+    <section class="dashboard" id="dashboard">
+
+        <h2>
+            Smart Pot Dashboard
+        </h2>
+
+        <div class="dashboard-box">
+
+            <div class="status" id="status">
+                🟢 Pot is Connected
+            </div>
+
+
+            <div class="data">
+
+                <div class="data-box">
+
+                    <h3 id="temp">
+                        24°C
+                    </h3>
+
+                    <p>
+                        Temperature
+                    </p>
+
+                </div>
+
+
+                <div class="data-box">
+
+                    <h3 id="level">
+                        75%
+                    </h3>
+
+                    <p>
+                        Water Level
+                    </p>
+
+                </div>
+
+
+                <div class="data-box">
+
+                    <h3>
+                        Good
+                    </h3>
+
+                    <p>
+                        Water Status
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button class="btn" onclick="checkWater()">
+                Check Water
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Smart Matka | Tradition • Technology • Sustainability
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function connectPot() {
+
+            document.getElementById("status").innerHTML =
+                "🟢 Smart Pot Connected Successfully!";
+
+            alert(
+                "Smart Indian Pot connected successfully! 🪷"
+            );
+
+        }
+
+
+        function checkWater() {
+
+            let temperature =
+                Math.floor(Math.random() * 5) + 22;
+
+            let level =
+                Math.floor(Math.random() * 30) + 60;
+
+            document.getElementById("temperature").innerText =
+                temperature + "°C";
+
+            document.getElementById("temp").innerText =
+                temperature + "°C";
+
+            document.getElementById("level").innerText =
+                level + "%";
+
+            alert(
+                "Water Temperature: " +
+                temperature +
+                "°C\nWater Level: " +
+                level +
+                "%"
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>

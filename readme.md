@@ -42,9 +42,36 @@ used to install,rn, uninstall any program/object and package
 
 to use npm,the project must be npm project
 to create npm project wevcan se 
--npm init -y
+-npm init -y 
 -it creates a package.jsonfile automatically 
 package.json holds all the information related to install packages from npm 
 -it also creates a folder nodes_modles automatically
--nodes modles holds the package/library files
+-nodes modules holds the package/library files
 -generally we ignore the node_modules by .gitignore
+nodemon - it restart the server automatically  when file changes to install 
+> npm i nodemon -D
+note: -D FLAG WILL INSTALL TIS PACKAGE as  developer dependancy 
+- to execte any program,pdate the package.json file thenm start the server as 
+<b>npm rn dev </b>
+- start  -> it will execte the app on deployment 
+-dev -. it will start server in the deployment phase (only for developer)
+
+-res : it will retrns contents(json, html,plain) to the user/client 
+-req : it will retrive the information from client to server 
+-server send also statuscode to the client, that indicates the error/success message 
+#status codes
+200 -> ok
+201-> created
+402 ->ok 
+403 -> forbiddden 
+404 -> not found  
+-500 -> internal server error 
+ #content type 
+ -text/plain
+ -text/html
+ -application/json
+ -texxt/css
+  the content type and status code can be send back to client by two ways 
+  1. res.writehead
+  2. res. setheader
+  3. res.statuscode
