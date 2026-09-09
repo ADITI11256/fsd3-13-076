@@ -75,3 +75,19 @@ note: -D FLAG WILL INSTALL TIS PACKAGE as  developer dependancy
   1. res.writehead
   2. res. setheader
   3. res.statuscode
+  ##response as html content 
+  1. res.end("any html content")
+  2. html file
+   . read by html created stream
+   . pipe with res  res.end('<any html tag >')
+   # json javascript object notation
+   server returns data only not html content becase html content will be retrn by frontend developer. the data is in json fromat
+   json always stores a data in key value pair  enclosed by crly() array can be stored by [] one pair of () will represent one object and its property will be seperated by, 
+   ```
+   {id:1,
+   name:'mobile'
+   price:25000,
+   rating:4.5,
+   review:200
+   }
+```
