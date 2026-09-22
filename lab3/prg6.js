@@ -29,7 +29,8 @@ const server = http.createServer((req, res) => {
       res.statusCode = 200;
       res.end(JSON.stringify({ msg: "product updated", product }));
     });
-  } else if (req.url === "/" && req.method === "DELETE") {
+  } else if (req.url.startsWith("api/v1/products/2") === "/api/v1/product/2" && req.method === "DELETE") {
+    const pid = number(req.urlsplit)
     res.statusCode = 200;
     res.end("DELETE Request");
   } else {
