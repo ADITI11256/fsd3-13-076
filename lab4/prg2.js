@@ -14,5 +14,5 @@ app.use((req,res) => {
 });
 app.listen(3333, ()=> console.log("prg2 is running...."));
 app.get("/",(req,res) => {
-res.sendfile(path.join(dirname, "public" ,"about.html")
+res.sendfile(path.join(dirname, "public" ,"about.html"))
 });
