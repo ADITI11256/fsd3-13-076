@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Nova X1</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+            color: #111827;
+        }
+
+        /* NAVBAR */
+        nav {
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 8%;
+            background: white;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #635bff;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 25px;
+        }
+
+        /* ABOUT */
+        .about {
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 70px 8%;
+            gap: 50px;
+        }
+
+        .about-content {
+            max-width: 600px;
+        }
+
+        .about-content h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .about-content h1 span {
+            color: #635bff;
+        }
+
+        .about-content p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 14px 25px;
+            background: #635bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+
+        /* PHONE */
+        .phone {
+            width: 250px;
+            height: 500px;
+            background: #111827;
+            border-radius: 40px;
+            padding: 10px;
+            transform: rotate(5deg);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+        }
+
+        .screen {
+            height: 100%;
+            border-radius: 32px;
+            background: linear-gradient(145deg, #635bff, #a78bfa);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* VALUES */
+        .values {
+            background: white;
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .values h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .card {
+            width: 280px;
+            padding: 30px;
+            background: #f5f7fb;
+            border-radius: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111827;
+            color: white;
+        }
+
+        @media (max-width: 800px) {
+
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content h1 {
+                font-size: 42px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+
+        <div class="logo">
+            Nova<span>X1</span>
+        </div>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </div>
+
+    </nav>
+
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
+
+        <div class="about-content">
+
+            <h1>
+                About <span>Nova X1</span>
+            </h1>
+
+            <p>
+                Nova X1 is designed for people who want powerful
+                performance, beautiful design and modern technology
+                in one smartphone.
+            </p>
+
+            <p>
+                Our goal is simple — to create a smartphone that
+                combines speed, photography, battery life and an
+                immersive display while keeping the experience
+                simple and enjoyable.
+            </p>
+
+            <p>
+                From everyday tasks to gaming, photography and
+                entertainment, Nova X1 is built to keep up with you.
+            </p>
+
+            <a href="index.html" class="btn">
+                Explore Nova X1
+            </a>
+
+        </div>
+
+
+        <!-- PHONE -->
+        <div class="phone">
+
+            <div class="screen">
+                NOVA X1
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- OUR VALUES -->
+    <section class="values">
+
+        <h2>Why Nova X1?</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🚀 Performance</h3>
+                <p>
+                    Fast and smooth performance for
+                    apps, gaming and multitasking.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📸 Photography</h3>
+                <p>
+                    Capture your favorite moments
+                    with a powerful camera system.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🔋 Long Battery</h3>
+                <p>
+                    A powerful battery keeps you
+                    connected throughout the day.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Nova X1. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

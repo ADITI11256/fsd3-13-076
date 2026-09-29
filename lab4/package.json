@@ -2,10 +2,10 @@
   "name": "lab3",
   "version": "1.0.0",
   "description": " localhost -url 127.0.0.1  - IP address",
-  "main": "prg1.js",
+  "main": "prg2.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon prg1.js"
+    "dev": "nodemon prg2.js"
   },
   "keywords": [],
   "author": "",
