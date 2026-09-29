@@ -184,3 +184,16 @@ EXAMPLE: (url/id)
 #UPDATE :
 PUT/PATCH:  TO UPDATE , THE SERVER NEED ID from url and body (data ) to update data from the
 ```
+1.create project folder 
+2. goto project and open terminal 
+execte `~ npm init -y~
+4. install `npm i nodemon -D`
+open package.json
+a. change `type:'module'`
+b.update script{
+    "start": node prg.js",
+    "dev": 'nodemonprg1.js"
+}
+. create prg1.js in folder
+7. .add foldername/node_modles in .gitignore
+send method/fnction is used to revert back content to the client it may be html, json ,html files, plane text we can also add status code with sttaus function it can be chain with  send function 
