@@ -197,3 +197,14 @@ b.update script{
 . create prg1.js in folder
 7. .add foldername/node_modles in .gitignore
 send method/fnction is used to revert back content to the client it may be html, json ,html files, plane text we can also add status code with sttaus function it can be chain with  send function 
+on map 
+this function is used to iterate any array .it must return new array 
+array.map((item) => {
+    return 
+})
+array.map((item) => ())
+...
+
+in first function  we hav eto used explicit return function  in syntax 2 doesnot  required 
+exclude no. of properties from any json objects 
+to search any item to json array used find method, it return null on unsuccessfull and object on successfull.
