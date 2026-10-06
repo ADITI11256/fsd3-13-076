@@ -51,7 +51,7 @@ app.get("/api/products/query", (req, res) => {
 app.get("/api/products/:id", (req, res) => {
   const { id } = req.params;
   const p = products.find((item) => item.id === Number(id));
-  if (p) res.status(200).json({ status: true, data: p });
+  if (p) res.status(200).json({ status: true, data: p }); 
   else
     res
       .status(404)
@@ -62,3 +62,4 @@ app.use((req, res) => {
   res.status(404).send("Route not found");
 });
 app.listen(3333, () => console.log("prg4 is running..."));
+
